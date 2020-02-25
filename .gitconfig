@@ -1,0 +1,29 @@
+[user]
+    name = Kentaro Iizuka
+    email = iizuka.kentaro@gmail.com
+[color]
+    ui = true
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    grep = auto
+[core]
+    editor = vim 
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ch = checkout
+    br = branch
+    st = status
+    df = diff
+    files = diff --name-only
+    sb = show-branch --color
+    up = fetch upstream
+    or = fetch origin
+[pull]
+    rebase = true
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
