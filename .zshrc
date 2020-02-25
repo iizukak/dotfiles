@@ -14,6 +14,7 @@ alias ls='ls --color=auto'
 alias ll='ls -alhF'
 alias l='ls -CF'
 alias vim='nvim'
+alias ctags='~/ctags/ctags -R'
 
 # For git completion and prompt
 source ~/git-prompt.sh
