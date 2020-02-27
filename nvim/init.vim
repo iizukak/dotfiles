@@ -65,8 +65,6 @@ nmap G Gzz
 " 改行したときコメントを継続しない
 autocmd FileType * setlocal formatoptions-=ro
 
-colorscheme zellner
-
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -83,6 +81,14 @@ if dein#load_state('$HOME/.cache/dein')
   " Required:
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('scrooloose/nerdtree')
+  call dein#add('tomasr/molokai')
+
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+  let g:deoplete#enable_at_startup = 1
 
   " Required:
   call dein#end()
@@ -93,16 +99,8 @@ endif
 filetype plugin indent on
 syntax enable
 
-"If you want to install not installed plugins on startup.
-"End dein Scripts-------------------------
-
-call dein#add('Shougo/deoplete.nvim')
-if !has('nvim')
-  call dein#add('roxma/nvim-yarp')
-  call dein#add('roxma/vim-hug-neovim-rpc')
-endif
-let g:deoplete#enable_at_startup = 1
-
 if dein#check_install()
   call dein#install()
 endif
+
+colorscheme molokai
