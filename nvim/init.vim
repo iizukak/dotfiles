@@ -1,3 +1,7 @@
+" deoplete need pyenv.
+let g:python_host_prog=$HOME.'/.pyenv/versions/neovim-2/bin/python'
+let g:python3_host_prog=$HOME.'/.pyenv/versions/neovim-3/bin/python'
+
 " 行数表示
 set nu
 
@@ -96,10 +100,11 @@ endif
 
 "End dein Scripts-------------------------
 
-" For deoplete
 call dein#add('Shougo/deoplete.nvim')
 if !has('nvim')
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
 endif
 let g:deoplete#enable_at_startup = 1
+
+

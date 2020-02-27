@@ -22,3 +22,12 @@ $ git clone git@github.com:iizukak/dotfiles.git
 $ ln -s dotfiles/.gitconfig .
 $ ln -s dotfiles/.zshrc .
 ```
+
+For Ricty
+
+```
+$ brew tap sanemat/font
+$ brew install ricty
+```
+
+This command install Ricty to `/usr/local/opt/ricty/share/fonts/`
