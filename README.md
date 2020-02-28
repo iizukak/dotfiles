@@ -15,7 +15,6 @@ Before install dotfiles, Please install these requirements.
 - [Neovim](https://github.com/neovim/neovim)
 	- [Installation](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - [Universal Ctags](https://github.com/universal-ctags/ctags)
-- [git-prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
 - dein
     - [reference blog](https://qiita.com/Coolucky/items/0a96910f13586d635dc0)
 
