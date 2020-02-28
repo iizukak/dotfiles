@@ -2,17 +2,10 @@
 let g:python_host_prog=$HOME.'/.pyenv/versions/neovim-2/bin/python'
 let g:python3_host_prog=$HOME.'/.pyenv/versions/neovim-3/bin/python'
 
-" 行数表示
-set nu
-
-" ステータスバー表示
-set laststatus=2
+set nu                            " 行数表示
+set laststatus=2                  " ステータスバー表示
 set statusline=%<%F\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%4v(ASCII=%03.3b,HEX=%02.2B)\ %l/%L(%P)%m
-
-"タブにスペースを使う
-set expandtab
-
-let mapleader = ","               " キーマップリーダー
+set expandtab                     " タブにスペースを使う
 set scrolloff=5                   " スクロール時の余白確保
 set textwidth=0                   " 一行に長い文章を書いていても自動折り返しをしない
 set nobackup                      " バックアップ取らない
@@ -39,6 +32,16 @@ set ignorecase " 大文字小文字無視
 set smartcase  " 大文字ではじめたら大文字小文字無視しない
 set incsearch  " インクリメンタルサーチ
 set hlsearch   " 検索文字をハイライト
+
+" Space + hjkl で window を移動できるようにする
+let mapleader = "\<Space>"
+nnoremap <Leader>e :e<CR>
+nnoremap <Leader>w :w<CR>
+nmap <Leader> [window]
+nnoremap [window]h <C-w>h
+nnoremap [window]j <C-w>j
+nnoremap [window]k <C-w>k
+nnoremap [window]l <C-w>l
 
 vnoremap <silent> // y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 vnoremap /r "xy:%s/<C-R>=escape(@x, '\\/.*$^~[]')<CR>//gc<Left><Left><Left>
