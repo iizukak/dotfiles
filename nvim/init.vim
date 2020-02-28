@@ -88,7 +88,6 @@ if dein#load_state('$HOME/.cache/dein')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
-  let g:deoplete#enable_at_startup = 1
 
   " Required:
   call dein#end()
@@ -104,3 +103,7 @@ if dein#check_install()
 endif
 
 colorscheme molokai
+
+let g:deoplete#enable_at_startup = 1
+
+autocmd vimenter * NERDTree
