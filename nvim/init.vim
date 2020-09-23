@@ -1,6 +1,6 @@
 " deoplete need pyenv.
-let g:python_host_prog=$HOME.'/.pyenv/versions/neovim-2/bin/python'
-let g:python3_host_prog=$HOME.'/.pyenv/versions/neovim-3/bin/python'
+let g:python_host_prog=$HOME.'/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog=$HOME.'/.pyenv/versions/neovim3/bin/python'
 
 set nu                            " 行数表示
 set laststatus=2                  " ステータスバー表示

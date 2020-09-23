@@ -3,4 +3,4 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include"
 
 alias ls='ls -G'
 
-alias ctags=/usr/local/Cellar/universal-ctags/HEAD-003c574/bin/ctags
+alias ctags=/usr/local/Cellar/ctags/5.8_1/bin/ctags
