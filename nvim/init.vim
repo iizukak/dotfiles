@@ -73,15 +73,10 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" Required:
 set runtimepath+=/$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
 if dein#load_state('$HOME/.cache/dein')
   call dein#begin('$HOME/.cache/dein')
 
-  " Let dein manage dein
-  " Required:
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('scrooloose/nerdtree')
   call dein#add('tomasr/molokai')
@@ -90,18 +85,12 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('Shougo/denite.nvim')
   call dein#add('bakpakin/janet.vim')
   call dein#add('Olical/conjure')
+  call dein#add('easymotion/vim-easymotion')
 
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-
-  " Required:
   call dein#end()
   call dein#save_state()
 endif
 
-" Required:
 filetype plugin indent on
 syntax enable
 
