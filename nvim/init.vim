@@ -86,6 +86,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('bakpakin/janet.vim')
   call dein#add('Olical/conjure')
   call dein#add('easymotion/vim-easymotion')
+  call dein#add('jiangmiao/auto-pairs')
 
   call dein#end()
   call dein#save_state()
