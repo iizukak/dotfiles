@@ -50,7 +50,7 @@ precmd () { vcs_info }
 
 # プロンプト（左）
 PROMPT='%{$fg[red]%}[%n@%m]%{$reset_color%}'
+PROMPT=$PROMPT'%{${fg[red]}%}[%~]%{${reset_color}%}'
 PROMPT=$PROMPT'${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} '
 
-# プロンプト（右）
-RPROMPT='%{${fg[red]}%}[%~]%{${reset_color}%}'
+RPROMPT=''
