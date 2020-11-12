@@ -87,6 +87,10 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('tomasr/molokai')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('deoplete-plugins/deoplete-jedi')
+  call dein#add('Shougo/denite.nvim')
+  call dein#add('bakpakin/janet.vim')
+  call dein#add('Olical/conjure')
+
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -109,4 +113,4 @@ colorscheme molokai
 
 let g:deoplete#enable_at_startup = 1
 
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
