@@ -87,6 +87,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('Olical/conjure')
   call dein#add('easymotion/vim-easymotion')
   call dein#add('jiangmiao/auto-pairs')
+  call dein#add('thinca/vim-quickrun')
 
   call dein#end()
   call dein#save_state()
