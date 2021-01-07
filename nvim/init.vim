@@ -80,14 +80,16 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('scrooloose/nerdtree')
   call dein#add('tomasr/molokai')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('deoplete-plugins/deoplete-jedi')
+  " call dein#add('Shougo/deoplete.nvim')
+  " call dein#add('deoplete-plugins/deoplete-jedi')
   call dein#add('Shougo/denite.nvim')
   call dein#add('bakpakin/janet.vim')
   call dein#add('Olical/conjure')
   call dein#add('easymotion/vim-easymotion')
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('thinca/vim-quickrun')
+  call dein#add('JuliaEditorSupport/julia-vim')
+  call dein#add('neoclide/coc.nvim')
 
   call dein#end()
   call dein#save_state()
@@ -102,6 +104,10 @@ endif
 
 colorscheme molokai
 
-let g:deoplete#enable_at_startup = 1
+let $PATH .= ':/home/iizuka/julia-1.5.3/bin/'
 
-" autocmd vimenter * NERDTree
+" set statusline^=%{coc#status()}
+" load personal coc.nvim scripts
+runtime! mycoc.vim
+
+" let g:deoplete#enable_at_startup = 1
