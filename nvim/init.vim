@@ -90,6 +90,8 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('thinca/vim-quickrun')
   call dein#add('JuliaEditorSupport/julia-vim')
   call dein#add('neoclide/coc.nvim')
+  call dein#add('alaviss/nim.nvim')
+  call dein#add('andrejlevkovitch/vim-lua-format')
 
   call dein#end()
   call dein#save_state()
@@ -104,10 +106,10 @@ endif
 
 colorscheme molokai
 
-let $PATH .= ':/home/iizuka/julia-1.5.3/bin/'
-
 " set statusline^=%{coc#status()}
 " load personal coc.nvim scripts
 runtime! mycoc.vim
 
+autocmd FileType lua nnoremap <buffer> <c-k> :call LuaFormat()<cr>
+autocmd BufWrite *.lua call LuaFormat()
 " let g:deoplete#enable_at_startup = 1
