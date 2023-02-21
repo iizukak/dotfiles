@@ -24,4 +24,5 @@ $ cd
 $ git clone git@github.com:iizukak/dotfiles.git
 $ ln -s dotfiles/.gitconfig .
 $ ln -s dotfiles/.zshrc .
+$ ln -s dotfiles/.zpreztorc .
 ```
