@@ -46,3 +46,5 @@ RPROMPT=''
 PATH=$HOME/.cargo/bin:$PATH
 export PATH=/Users/iizuka/.nimble/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
+
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
