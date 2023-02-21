@@ -1,7 +1,3 @@
-" deoplete need pyenv.
-let g:python_host_prog=$HOME.'/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog=$HOME.'/.pyenv/versions/neovim3/bin/python'
-
 set nu                            " 行数表示
 set laststatus=2                  " ステータスバー表示
 set statusline=%<%F\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%4v(ASCII=%03.3b,HEX=%02.2B)\ %l/%L(%P)%m
@@ -32,9 +28,11 @@ set ignorecase " 大文字小文字無視
 set smartcase  " 大文字ではじめたら大文字小文字無視しない
 set incsearch  " インクリメンタルサーチ
 set hlsearch   " 検索文字をハイライト
+set splitbelow
 
 " Space + hjkl で window を移動できるようにする
-let mapleader = "\<Space>"
+" let mapleader = "\<Space>"
+let mapleader = ","
 nnoremap <Leader>e :e<CR>
 nnoremap <Leader>w :w<CR>
 nmap <Leader> [window]
@@ -68,48 +66,19 @@ nmap G Gzz
 " 改行したときコメントを継続しない
 autocmd FileType * setlocal formatoptions-=ro
 
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
-set runtimepath+=/$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
-if dein#load_state('$HOME/.cache/dein')
-  call dein#begin('$HOME/.cache/dein')
-
-  call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('tomasr/molokai')
-  " call dein#add('Shougo/deoplete.nvim')
-  " call dein#add('deoplete-plugins/deoplete-jedi')
-  call dein#add('Shougo/denite.nvim')
-  call dein#add('bakpakin/janet.vim')
-  call dein#add('Olical/conjure')
-  call dein#add('easymotion/vim-easymotion')
-  call dein#add('jiangmiao/auto-pairs')
-  call dein#add('thinca/vim-quickrun')
-  call dein#add('JuliaEditorSupport/julia-vim')
-  call dein#add('neoclide/coc.nvim')
-  call dein#add('alaviss/nim.nvim')
-  call dein#add('andrejlevkovitch/vim-lua-format')
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-filetype plugin indent on
-syntax enable
-
-if dein#check_install()
-  call dein#install()
-endif
+" vim-plug の設定
+" プラグインを追加したら、リロードして :PlugInstall を実行する
+call plug#begin()
+Plug 'scrooloose/nerdtree'
+Plug 'tomasr/molokai'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
 
 colorscheme molokai
 
-" set statusline^=%{coc#status()}
-" load personal coc.nvim scripts
 runtime! mycoc.vim
 
-autocmd FileType lua nnoremap <buffer> <c-k> :call LuaFormat()<cr>
-autocmd BufWrite *.lua call LuaFormat()
-" let g:deoplete#enable_at_startup = 1
+autocmd BufNewFile,BufRead *.scm  set filetype=scheme
+
+" NERDTree の隠しファイル表示設定
+let NERDTreeShowHidden = 1
