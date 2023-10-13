@@ -1,23 +1,22 @@
 # dotfiles
 
-my personal settings
+iizukak's personal settings.
 
-## Requirements
+These scripts are tested with Windows 11 + WSL2 + Ubuntu 22.04
 
-Before install dotfiles, Please install these requirements.
+## Third party softwares
 
+- npm & n
 - zsh
-- pyenv
-    - [reference blog for macOS](https://sleepless-se.net/2019/08/05/pyenv-install-zlib-not-available-error/)
-- [iTerm2](https://iterm2.com/) 
-- [source-han-code-jp](https://github.com/adobe-fonts/source-han-code-jp)
+  - [prezto](https://github.com/sorin-ionescu/prezto)
 - [Neovim](https://github.com/neovim/neovim)
-	- [Installation](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+  - [vim-plug](https://github.com/junegunn/vim-plug)
+  - [coc.nvim](https://github.com/neoclide/coc.nvim)
+- [pyenv](https://github.com/pyenv/pyenv)
+- [source-han-code-jp](https://github.com/adobe-fonts/source-han-code-jp)
 - [Universal Ctags](https://github.com/universal-ctags/ctags)
-- dein
-    - [reference blog](https://qiita.com/Coolucky/items/0a96910f13586d635dc0)
 
-## Installation
+## Create symbolic links
 
 ```
 $ cd
