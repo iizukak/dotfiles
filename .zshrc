@@ -16,10 +16,11 @@ alias vim='nvim'
 
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
-eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 PATH=$HOME/.cargo/bin:$PATH
-export PATH=/Users/iizuka/.nimble/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
