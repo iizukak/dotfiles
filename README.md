@@ -12,9 +12,10 @@ These scripts are tested with Windows 11 + WSL2 + Ubuntu 22.04
 - [Neovim](https://github.com/neovim/neovim)
   - [vim-plug](https://github.com/junegunn/vim-plug)
   - [coc.nvim](https://github.com/neoclide/coc.nvim)
-- [pyenv](https://github.com/pyenv/pyenv)
 - [source-han-code-jp](https://github.com/adobe-fonts/source-han-code-jp)
 - [Universal Ctags](https://github.com/universal-ctags/ctags)
+- [Rye](https://github.com/mitsuhiko/rye)
+  - `pyglobal` directory includes global Python settings.
 
 ## Create symbolic links
 
