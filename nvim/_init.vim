@@ -71,12 +71,12 @@ autocmd FileType * setlocal formatoptions-=ro
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 colorscheme molokai
 
-runtime! mycoc.vim
+" runtime! mycoc.vim
 
 autocmd BufNewFile,BufRead *.scm  set filetype=scheme
 
