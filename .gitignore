@@ -1,2 +1,2 @@
-coc/
 nvim/lazy-lock.json
+pyglobal/*.lock

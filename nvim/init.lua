@@ -7,7 +7,10 @@ set.cindent = true
 set.tabstop = 4
 set.shiftwidth = 4
 set.softtabstop = 4
+set.smartcase = true
+
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.g.python3_host_prog = '~/dotfiles/pyglobal/.venv/bin/python'
 
 -- lazy.nvim settings.
 -- https://github.com/folke/lazy.nvim#-installation
@@ -41,6 +44,13 @@ require("lazy").setup({
     "hrsh7th/nvim-cmp",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
+    "psf/black",
+    -- init.lua:
+    {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.4',
+        dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' }
+    },
 })
 
 vim.cmd [[colorscheme molokai]]
@@ -150,7 +160,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 local lspconfig = require('lspconfig')
 
 lspconfig.pyright.setup {
-    capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+        python = {
+            venvPath = ".",
+            pythonPath = "./.venv/bin/python",
+            analysis = {
+                extraPaths = { "." }
+            },
+        },
+    }
 }
 
 lspconfig.tsserver.setup {}
@@ -195,3 +214,10 @@ lspconfig.lua_ls.setup {
         return true
     end
 }
+
+-- settings for Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
