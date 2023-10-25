@@ -11,6 +11,7 @@ export XDG_CONFIG_HOME=$HOME/dotfiles
 alias ll='ls -alhF'
 alias l='ls -CF'
 alias vim='nvim'
+alias bat='batcat'
 
 # export PYENV_ROOT="$HOME/.pyenv"
 # export PATH="$PYENV_ROOT/bin:$PATH"
