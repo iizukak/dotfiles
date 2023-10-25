@@ -181,6 +181,9 @@ lspconfig.rust_analyzer.setup {
     },
 }
 
+-- .toml LSP
+lspconfig.taplo.setup{}
+
 lspconfig.lua_ls.setup {
     capabilities = capabilities,
     on_init = function(client)
