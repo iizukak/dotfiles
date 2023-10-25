@@ -10,11 +10,10 @@ These scripts are tested with Windows 11 + WSL2 + Ubuntu 22.04
 - zsh
   - [prezto](https://github.com/sorin-ionescu/prezto)
 - [Neovim](https://github.com/neovim/neovim)
+  - `apt` でインストールされる Neovim はバージョンが古いため、AppImage を別途入れる必要あり
   - lspconfig
   - Lazy
   - Telescope
-- [source-han-code-jp](https://github.com/adobe-fonts/source-han-code-jp)
-- [Universal Ctags](https://github.com/universal-ctags/ctags)
 - [Rye](https://github.com/mitsuhiko/rye)
   - `pyglobal` directory includes global Python settings.
 
